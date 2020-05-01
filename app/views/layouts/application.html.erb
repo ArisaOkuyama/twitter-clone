@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+    <nav>
+      <div class="topnav">
+        <%= link_to "HOME" , root_path %>
+        <% if user_signed_in? %>
+          <%= link_to "Profile", profile_path(username: current_user.username) %>
+          <%= link_to "Sign-out" , destroy_user_session_path, method: :delete %>
+        <% elsif %>
+          <%= link_to "Sign-up" , new_user_registration_path %>
+          <%= link_to "Sing-in" , new_user_session_path %>
+        <% end %>
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

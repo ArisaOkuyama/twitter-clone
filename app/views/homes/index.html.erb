@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+    <h1>Welcome to Twitter clone, @<%= current_user.first_name if current_user.first_name  %></h1>
+
+
+    <p ><%= link_to "Create new tweet", new_tweet_path %></p>
+    
+
+    <div>
+        <% @tweets.each do |tweet| %>
+        <div >
+            <span><strong><%= link_to "#{tweet.user.username}", profile_path(tweet.user.username)  %></strong></span><br>
+            <h2><%= tweet.content %></h2><br>
+            
+            <span>::twitted at <%= tweet.created_at %></span><br>
+            <span>-----------------------------------------------------------------------</span>
+        </div>
+        <% end %>
+    </div>
+<% else %>
+    <h1>Please sign up or sign in to see the tweets</h1>
+<% end %>

@@ -1,0 +1,15 @@
+current directory: /Users/arisaokuyama/project/rails/twitter_clone/vendor/gems/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/arisaokuyama/.rbenv/versions/2.7.0/bin/ruby -I /Users/arisaokuyama/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20200429-39272-1ypethu.rb extconf.rb
+creating Makefile
+
+current directory: /Users/arisaokuyama/project/rails/twitter_clone/vendor/gems/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/arisaokuyama/project/rails/twitter_clone/vendor/gems/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/arisaokuyama/project/rails/twitter_clone/vendor/gems/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20200429-39272-grh04i/skiptrace/internal
